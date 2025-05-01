@@ -1,0 +1,131 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Cambiado para distribuir el título y los enlaces */
+  align-items: center;
+  background-color: #b22222;
+  padding: 15px;
+  color: white;
+  margin-right: 10px;
+  height: 60px;
+  width: 100%; 
+}
+
+.navbar-title {
+  font-family: "Tinos", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  font-weight: bold; 
+  color: white; 
+  letter-spacing: 5px; 
+  cursor: pointer;
+  margin-right: 350px;
+  margin-left: 50px; 
+}
+
+.navbar-links-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-links a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
+
+.profile-menu-wrapper {
+  position: relative;
+}
+
+.profile-avatar {
+  font-size: 22px;
+  cursor: pointer;
+  background-color: #eee;
+  color: #4b2e83;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.profile-avatar:hover {
+  background-color: #ccc;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+  padding: 8px 0;
+  z-index: 1000;
+  animation: slideIn 0.3s ease forwards;
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-dropdown a,
+.profile-dropdown button {
+  padding: 10px 16px;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px;
+  transition: background 0.2s;
+  color: #b22222;
+}
+
+.profile-dropdown a:hover,
+.profile-dropdown button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Extra: shake animation for cart icon if needed */
+.cart-icon {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+.cart-icon.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  75% { transform: translateX(-3px); }
+  100% { transform: translateX(0); }
+}
+
+  
