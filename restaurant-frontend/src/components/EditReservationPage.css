@@ -1,0 +1,77 @@
+@keyframes fadeInSlide {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scaleButton {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+  }
+  
+  .edit-container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: #fff8f5;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeInSlide 0.6s ease-out;
+  }
+  
+  .edit-container h2 {
+    text-align: center;
+    color: #b22222;
+    margin-bottom: 25px;
+  }
+  
+  .edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .edit-form label {
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #333;
+  }
+  
+  .edit-form input,
+  .edit-form select {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .edit-form input:focus,
+  .edit-form select:focus {
+    border-color: #b22222;
+    box-shadow: 0 0 0 3px rgba(178, 34, 34, 0.15);
+    outline: none;
+  }
+  
+  .edit-form button {
+    background-color: #b22222;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .edit-form button:hover {
+    animation: scaleButton 0.3s ease-in-out;
+    background-color: #8b0000;
+  }
+  
